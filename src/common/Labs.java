@@ -13,6 +13,7 @@ import java.util.List;
 import java.util.Map;
 import java.util.Set;
 import java.util.TreeMap;
+import java.util.TreeSet;
 
 /**
  *
@@ -71,5 +72,15 @@ public class Labs {
             System.out.println(m);
         }
         System.out.println("");
+        
+        Set<Movie> treeSet = new TreeSet<Movie>();
+        treeSet.add(m1);
+        treeSet.add(m2);
+        treeSet.add(m3);
+        treeSet.add(m4);
+        
+        for(Movie m : treeSet) {
+            System.out.println(m);
+        }
     }
 }
