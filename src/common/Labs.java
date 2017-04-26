@@ -39,7 +39,8 @@ public class Labs {
             Movie m = hashMap.get(key);
             System.out.println(m.toString());
         }
-        
+        System.out.println("");
+
         Map<String, Movie> treeMap =
                 new TreeMap<String, Movie>();
         treeMap.put(Integer.toString(m1.getMovieID()), m1);
@@ -52,7 +53,8 @@ public class Labs {
             Movie m = hashMap.get(key);
             System.out.println(m.toString());
         }
-        
+        System.out.println("");
+
         Collection<Movie> values = treeMap.values();
         List<Movie> sortedList = new ArrayList<Movie>(values);
 
@@ -60,5 +62,14 @@ public class Labs {
         for(Movie m : sortedList) {
             System.out.println(m);
         }
+        System.out.println("");
+
+        Collection<Movie> values2 = treeMap.values();
+        List<Movie> sortedList2 = new ArrayList<Movie>(values2);
+        Collections.sort(sortedList2, new MovieByID());
+        for(Movie m : sortedList2) {
+            System.out.println(m);
+        }
+        System.out.println("");
     }
 }

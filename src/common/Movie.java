@@ -10,7 +10,7 @@ import org.apache.commons.lang3.builder.CompareToBuilder;
  * field can be used for sorting. What will you do?
  * 
  */
-public class Movie implements Comparable {
+public class Movie implements Comparable<Movie> {
     private String title;
     private String director;
     private int movieID;
@@ -80,13 +80,13 @@ public class Movie implements Comparable {
     }
     
     @Override
-    public int compareTo(Object other) {
+    public int compareTo(Movie m1) {
         
-        Movie m = (Movie)other;
+        Movie m2 = (Movie)m1;
         
         // Using a utility from Apache Commons
         return new CompareToBuilder()
-               .append(this.movieID, m.movieID)
+               .append(this.movieID, m1.movieID)
                .toComparison();
     }
 }
